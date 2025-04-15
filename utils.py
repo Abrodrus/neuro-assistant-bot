@@ -7,7 +7,7 @@ def load_prompt():
 def generate_ai_response(system_prompt, user_input):
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_input}

@@ -1,8 +1,11 @@
 import telebot
 import openai
-from config import TELEGRAM_TOKEN, OPENAI_API_KEY
+import os
 from utils import load_prompt, generate_ai_response
 from db import init_db
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 openai.api_key = OPENAI_API_KEY
